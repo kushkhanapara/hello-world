@@ -1,0 +1,70 @@
+version: 1.0.0
+alias: ""
+discoveryPort:
+  name: Testing Source Aligned Data Product 2
+  description: ""
+  category: ""
+  image: ""
+  autofillUserinfo: ""
+  tags: []
+  extra: {}
+  createdBy:
+    name: ""
+    userid: ""
+    email: ""
+  createdTs: ""
+  updatedTs: ""
+inputPorts:
+  - alias: Test$2$1
+    description: costtest
+    tags: []
+    extra: {}
+    syncType: pull
+    type: s3-parquet
+    dataSetUrn: urn:dv:dataset:a773900a-38e9-4e56-942c-04c73362b711
+    incrementalStrategy: {}
+    filter: ""
+    projection: []
+    entity:
+      createEntity: true
+      path: "This is a ##sample## string with ##multiple## values."
+      variables:
+        - key: sample
+          value: ""
+      advanceOptions:
+        delimiter: ""
+        header: false
+productState:
+  alias: ""
+  refreshInterval: ""
+  logicalSchemaUrn: ""
+  retentionVersions: ""
+  updateStrategy: ""
+  logicalSchema: ""
+  productStoreState:
+    enforceSchemaMethod: ""
+  updateStrategyOptions:
+    - entityRef: ""
+      uniqueKeyColumns: []
+      changeTrackColumns: []
+      timeTrackColumn: ""
+transformation:
+  - alias: Select$Columns$1
+    type: ""
+    description: ""
+controlPort:
+  dataQualityCheck:
+    tableId:
+      inputPort:
+        - checks: 2863
+          referenceAlias: Test$2$1
+    enable:
+      inputPort:
+        - checks: true
+          referenceAlias: Test$2$1
+    RecordCountCheck:
+      inputPort:
+        - checks:
+            expression: ">="
+            number: 10
+          referenceAlias: Test$2$1
