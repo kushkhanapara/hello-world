@@ -52,6 +52,9 @@ transformation:
   - alias: Select$Columns$1
     type: ""
     description: ""
+  - alias: Select$Columns$2
+    type: ""
+    description: ""
 controlPort:
   dataQualityCheck:
     tableId:
